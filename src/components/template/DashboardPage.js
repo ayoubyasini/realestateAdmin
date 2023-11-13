@@ -3,14 +3,14 @@ import styles from "./DashboardPage.module.css";
 function DashboardPage({createdAt}) {
   return (
     <div className={styles.container}>
-      <h3>سلام 👋</h3>
-      <p>آگهی های خود را ثبت کنید تا هزاران نفر آن را مشاهده کنند</p>
+      <h3>hi 👋</h3>
+      <p>Register your ads to be seen by thousands of people</p>
       <div className={styles.createdAt}>
-        <p>تاریخ عضویت: </p>
-        <span>{createdAt.toLocaleDateString("fa-IR")}</span>
+        <p>registery date :</p>
+        <span>{createdAt.toLocaleDateString()}</span>
       </div>
     </div>
-  )
+  );
 }
 
 export default DashboardPage;

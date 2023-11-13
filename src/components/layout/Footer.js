@@ -4,19 +4,18 @@ function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.desc}>
-        <h3>سامانه خرید و اجاره ملک</h3>
+        <h3>Buying and renting property</h3>
         <p>
-          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
-          استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در
-          ستون و سطرآنچنان که لازم است.
+          Lorem ipsum is placeholder text commonly used in the graphic, print,
+          and publishing industries for previewing layouts and visual mockups.
         </p>
       </div>
-      <div>
+      <div className={styles.lists}>
         <ul>
-          <li>تعرفه قانونی</li>
-          <li>دسترسی سریع</li>
-          <li>مشاورین خبره</li>
-          <li>قولنامه محضری</li>
+          <li>Legal tariff</li>
+          <li>quick access</li>
+          <li>Expert consultants</li>
+          <li>Affidavit in person</li>
         </ul>
       </div>
     </footer>

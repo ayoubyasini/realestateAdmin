@@ -52,6 +52,7 @@
 
 .card button {
     margin: 0;
+    margin-left: 10px;
     color: #db0505;
     background-color: #fff;
     border: 1px #db0505 solid;

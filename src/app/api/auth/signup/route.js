@@ -12,7 +12,7 @@ export async function POST(req) {
 
     if (!email || !password) {
       return NextResponse.json(
-        { error: "لطفا اطلاعات معتبر وارد کنید" },
+        { error: "Please enter valid information" },
         { status: 422 }
       );
     }
@@ -22,7 +22,7 @@ export async function POST(req) {
 
     if (existingUser) {
       return NextResponse.json(
-        { error: "این حساب کاربری وجود دارد" },
+        { error: "This account exists" },
         { status: 422 }
       );
     }
@@ -35,14 +35,11 @@ export async function POST(req) {
     });
     console.log(newUser);
 
-    return NextResponse.json(
-      { message: "حساب کاربری ایجاد شد" },
-      { status: 201 }
-    );
+    return NextResponse.json({ message: "Create an account!" }, { status: 201 });
   } catch (err) {
     console.log(err);
     return NextResponse.json(
-      { error: "مشکلی در سرور رخ داده است" },
+      { error: "A problem has occurred on the server" },
       {
         status: 500,
       }

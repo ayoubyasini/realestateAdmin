@@ -7,8 +7,8 @@ import styles from "./LogoutButton.module.css"
 function LogoutButton() {
   return (
     <button className={styles.button} onClick={signOut}>
+        logout
         <FiLogOut />
-        خروج
     </button>
   )
 }

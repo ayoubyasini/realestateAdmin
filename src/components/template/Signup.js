@@ -18,7 +18,7 @@ function Signup() {
     e.preventDefault();
 
     if(password !== rePassword) {
-      toast.error("رمز و تکرار آن درست نمی باشد")
+      toast.error("The password is not correct");
       return
     }
     setLoading(true)
@@ -40,26 +40,47 @@ function Signup() {
   
   return (
     <div className={styles.form}>
-        <h4>فرم ثبت نام</h4>
-        <form>
-            <label>ایمیل:</label>
-            <input type='text' value={email} onChange={(e) => setEmail(e.target.value)}/>
-            <label>رمز عبور:</label>
-            <input type='password' value={password} onChange={(e) => setPassword(e.target.value)}/>
-            <label>تکرار رمز عبور:</label>
-            <input type='password' value={rePassword} onChange={(e) => setRePassword(e.target.value)}/>
-            {
-              loading ? 
-              <ThreeDots color='#304ffe' height={45} ariaLabel='three-dots-loading' visible={true} wrapperStyle={{margin: "auto"}}/>
-              : <button type='submit' onClick={signupHandler}>ثبت نام</button>
-            }
-        </form>
-        <p>حساب کاربری دارید؟
-            <Link href="/signin">ورود</Link>
-        </p>
-        <Toaster/>
+      <h4>Registration Form</h4>
+      <form>
+        <label>email :</label>
+        <input
+          type="text"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <label>:</label>
+        <input
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        <label>repeat the password :</label>
+        <input
+          type="password"
+          value={rePassword}
+          onChange={(e) => setRePassword(e.target.value)}
+        />
+        {loading ? (
+          <ThreeDots
+            color="#304ffe"
+            height={45}
+            ariaLabel="three-dots-loading"
+            visible={true}
+            wrapperStyle={{ margin: "auto" }}
+          />
+        ) : (
+          <button type="submit" onClick={signupHandler}>
+            Register
+          </button>
+        )}
+      </form>
+      <p>
+        You have an account?
+        <Link href="/signin"> sigin</Link>
+      </p>
+      <Toaster />
     </div>
-  )
+  );
 }
 
 export default Signup
